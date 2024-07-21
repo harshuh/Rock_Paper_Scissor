@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1
+      id="js-resetBtn"
+      onclick="
+
+      Score.Win = 0,
+      Score.Loose=  0,
+      Score.Tie=  0
+      localStorage.removeItem('Score')
+      gamerefresh(Score)
+      updateScore()
+      ;"
+      title="Click Here To Reset"
+    >
+      Rock Paper Scissor
+    </h1>
+
+    <button class="playingButtons" onclick="myMoves('Rock');">
+      <img class="icons" src="/Frontend/images/rock-emoji.png" alt="" />
+    </button>
+    <button class="playingButtons" onclick="myMoves('Paper');">
+      <img class="icons" src="/Frontend/images/paper-emoji.png" alt="" />
+    </button>
+    <button class="playingButtons" onclick="myMoves('Scissor');">
+      <img class="icons" src="/Frontend/images/scissors-emoji.png  " alt="" />
+    </button>
+
+    <div id="result">
+      <p class="js-result">Outcome : Press Icons To Start</p>
+      <p class="js-score">
+        Your Score : 0 <br />
+        Computer Score : 0
+      </p>
+      <p class="js-moves">
+        Computer Choose : <br />
+        You Loose : 0 <br />
+        Tie : 0
+      </p>
+    </div>
+
+    <script src="/Scripts/main.js"></script>
+  </body>
+</html>
